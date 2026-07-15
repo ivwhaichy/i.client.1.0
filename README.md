@@ -1,15 +1,15 @@
 # i.client
 
-Android VPN client built with Kotlin, Jetpack Compose, Android VpnService, WorkManager, WebView, and Xray runtime integration.
+Приложение написано Codex
+
+VPN-клиент для Android, построенный с помощью интеграции Kotlin, Jetpack Compose, Android VpnService, WorkManager, WebView и Xray. 
 
 ## Features
 
-- VLESS REALITY / XTLS Vision profile parsing and Xray config generation.
-- Multiple saved connection profiles with profile metadata.
-- Web panel opened from the selected profile URL.
-- Split tunneling modes for installed and system apps.
-- Quick Settings tile with the rabbit icon.
-- Connection state verification before showing the VPN as connected.
+- Анализ профиля VLESS REALITY / XTLS Vision и создание конфигурации Xray.
+- Несколько сохраненных профилей подключения с метаданными профиля.
+- Веб-панель, открываемая с выбранного URL профиля.
+- Разделение режимов туннелирования для установленных и системных приложений.
 
 ## Build
 
