@@ -9,16 +9,20 @@ Copyright notices in third-party source files remain unchanged.
 - vk-turn-proxy 1.8.3, revision e8a96967dc66f3dbd631596ea6a8b9fe03f9be69:
   GPL-3.0. Upstream: https://github.com/cacggghp/vk-turn-proxy
   Android patches and complete modified source accompany each release.
-- AndroidX, Jetpack Compose, WorkManager and Android apksig: Apache-2.0.
+- AndroidX, Jetpack Compose and WorkManager: Apache-2.0. Android apksig is used
+  only in instrumentation tests as of 1.3.2 (Apache-2.0).
 - Kotlin: Apache-2.0. Gradle: Apache-2.0.
 - Go standard library: BSD-style license; the Go toolchain is not embedded.
 
 The corresponding-source archive contains upstream license texts and vendored
 Go dependency sources with their notices. Maven dependencies are pinned in the
 Gradle files. The APK also carries the TURN helper's patched source and license.
-Source JARs of all 78 resolved Maven runtime dependencies are provided in the
+Source JARs of the resolved Maven dependencies, including the test-only apksig,
+are provided in the
 additional i.client-jvm-sources-VERSION.zip release asset, with their coordinates.
-apksig verifies downloaded APK signatures before the Android installer is opened.
+Production downloads are handed to the browser; Android verifies installation
+and the installed package's signing identity. Test fixtures still use apksig
+to check signature/digest rejection behavior.
 
 i.client is independent of VK, GitHub, OpenVPN and the sing-box project. No
 affiliation or endorsement by those projects is claimed. Product and protocol
